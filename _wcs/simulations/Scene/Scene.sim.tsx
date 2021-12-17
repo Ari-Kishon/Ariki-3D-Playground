@@ -7,5 +7,9 @@ export default createSimulation({
     name: 'Scene',
     componentType: Scene,
     props: {},
-    wrapper:SimulationSceneWrapper
+    wrapper: SimulationSceneWrapper,
+    environmentProps: {
+        canvasHeight: 696,
+        canvasWidth: 1010
+    }
 });
