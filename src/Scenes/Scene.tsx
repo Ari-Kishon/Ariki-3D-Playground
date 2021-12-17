@@ -1,3 +1,4 @@
+import defaultSkybox from '../Assets/SkyBoxes/default-skybox/default-skybox';
 import Box from '../Components/Shapes/Box'
 import Sphere from '../Components/Shapes/Sphere'
 import CameraControls from '../Components/Utils/CameraControls';
@@ -11,7 +12,7 @@ const Scene = () => <>
     <Sphere position={[3, 0, 0]}>
     </Sphere>
     <CameraControls/>
-    <Skybox color={[0, 3, 0]} />
+    <Skybox skyBoxTexture={defaultSkybox}/>
 </>
 
 export default Scene
