@@ -8,7 +8,7 @@ export default createSimulation({
     componentType: Box,
 props:{
     },
-    wrapper: colorBackgroundWrapper("red"),
+    wrapper: colorBackgroundWrapper("teal"),
     environmentProps: {
         canvasHeight: 452,
         canvasWidth: 836
