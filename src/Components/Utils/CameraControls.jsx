@@ -17,7 +17,6 @@ const CameraControls = () => {
     // Ref to the controls, so that we can update them on every frame using useFrame
     const controls = useRef();
     useFrame(() => controls.current.update());
-    console.log(camera.rotation)
     return (
       <orbitControls
         ref={controls}
