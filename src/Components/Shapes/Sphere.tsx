@@ -15,12 +15,12 @@ const Sphere = ({color = {primary:'red',secondary: 'blue'} ,meshProps}:ISpherePr
         <mesh
             {...meshProps}
             ref={ref}
-            scale={clicked ? 1 : 0.2}
+            scale={clicked ? 0.5 : 0.2}
             onClick={(event) => click(!clicked)}
             onPointerOver={(event) => hover(true)}
             onPointerOut={(event) => hover(false)}>
             <sphereGeometry args={[1,1,1]}/>
-            <meshStandardMaterial color={clicked ? color.primary : color.secondary} />
+            <meshStandardMaterial color={clicked ? color.secondary : color.primary} />
         </mesh>
     )
 }
