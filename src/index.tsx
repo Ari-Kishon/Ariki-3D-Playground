@@ -7,7 +7,7 @@ import Scene from './Scenes/Scene';
 ReactDOM.render(
   <React.StrictMode>
     <Canvas>
-        <Scene />
+      <Scene/>
     </Canvas>
   </React.StrictMode>,
   document.getElementById('root')
