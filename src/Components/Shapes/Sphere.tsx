@@ -3,10 +3,10 @@ import { useRef, useState } from 'react'
 import {useFrame } from '@react-three/fiber'
 
 interface ISphereProps {
-    color: {primary: string,secondary: string};
-    meshProps: JSX.IntrinsicElements['mesh']
+    color?: {primary: string,secondary: string};
+    meshProps?: JSX.IntrinsicElements['mesh']
 }
-const Sphere = ({color = {primary:'red',secondary: 'blue'} ,meshProps}:ISphereProps) => {
+const Sphere = ({color = {primary:'red',secondary: 'blue'} ,meshProps = {position:[0,0,0]}}:ISphereProps) => {
     const ref = useRef<THREE.Mesh>(null!)
     const [hovered, hover] = useState(false)
     const [clicked, click] = useState(false)

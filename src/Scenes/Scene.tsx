@@ -9,13 +9,13 @@ const Scene = () => <>
 
     <ambientLight />
     <pointLight position={[10, 10, 10]}></pointLight>
-    <Box position={[0, 0, 0]}></Box>
-    <Sphere color={{ primary: 'blue', secondary: 'red' }} meshProps={{ position: [1, 0, 0] }} />
-    <Sphere color={{ primary: 'blue', secondary: 'red' }} meshProps={{ position: [2, 0, 0] }} />
-    <Sphere color={{ primary: '#670c33', secondary: 'red' }} meshProps={{ position: [3, 0, 0] }} />
-    <Sphere color={{ primary: 'blue', secondary: 'red' }} meshProps={{ position: [-1, 0, 0] }} />
-    <Sphere color={{ primary: 'blue', secondary: 'red' }} meshProps={{ position: [-2, 0, 0] }} />
-    <Sphere color={{ primary: 'blue', secondary: 'red' }} meshProps={{ position: [-3, 0, 0] }} />
+    <Box/>
+    <Sphere meshProps={{ position: [1, 0, 0] }} />
+    <Sphere meshProps={{ position: [2, 0, 0] }} />
+    <Sphere meshProps={{ position: [3, 0, 0] }} />
+    <Sphere meshProps={{ position: [-1, 0, 0] }} />
+    <Sphere meshProps={{ position: [-2, 0, 0] }} />
+    <Sphere meshProps={{ position: [-3, 0, 0] }} />
     <CameraControls />
     <Skybox skyBoxTexture={defaultSkybox} />
 </>
