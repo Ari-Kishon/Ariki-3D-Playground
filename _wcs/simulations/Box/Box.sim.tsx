@@ -1,12 +1,12 @@
 
 import { createSimulation } from '@wixc3/react-simulation';
 import Box from '../../../src/Components/Shapes/Box';
-import { SimulationSceneWrapper } from '../../../src/Helpers/wrappers';
+import { defaultSceneWrapper } from '../../../src/Helpers/Wrappers/default-wrapper';
 
 export default createSimulation({
     name: 'Box',
     componentType: Box,
     props: {
     },
-    wrapper: SimulationSceneWrapper
+    wrapper: defaultSceneWrapper
 });

@@ -1,10 +1,10 @@
 import { createSimulation } from '@wixc3/react-simulation';
 import Sphere from '../../../src/Components/Shapes/Sphere';
-import { SimulationSceneWrapper } from '../../../src/Helpers/wrappers';
+import { defaultSceneWrapper } from '../../../src/Helpers/Wrappers';
 
 export default createSimulation({
     name: 'Sphere',
     componentType: Sphere,
     props: {},
-    wrapper: SimulationSceneWrapper
+    wrapper: defaultSceneWrapper
 });
