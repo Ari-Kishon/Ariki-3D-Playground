@@ -11,7 +11,7 @@ const Sphere = (props: JSX.IntrinsicElements['mesh']) => {
         <mesh
             {...props}
             ref={ref}
-            scale={clicked ? 1.5 : 1}
+            scale={clicked ? 1 : 0.2}
             onClick={(event) => click(!clicked)}
             onPointerOver={(event) => hover(true)}
             onPointerOut={(event) => hover(false)}>
