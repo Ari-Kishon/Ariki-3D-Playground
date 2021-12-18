@@ -8,11 +8,11 @@ export default createSimulation({
     componentType: Box,
     props: {
         color: {
-            primary: '#e00e0e',
+            primary: '#329ea2',
             secondary: '2312'
         },
         meshProps: {
-            position: [1, 1, 1]
+            position: [0, 0, 0]
         }
     },
     wrapper: SpaceSceneWrapper,
