@@ -16,6 +16,7 @@ const OrbitalCameraRotation = ({centerPosition = new Vector3(0,0,0)}:IOrbitalRot
     gl: { domElement },
   } = useThree();
   const controls = new OrbitControls( camera, domElement);
+    controls.enabled = false;
     controls.autoRotate = true
     useFrame(() => controls.update());
     return null
