@@ -4,6 +4,7 @@ import Box from '../Components/Shapes/Box'
 import Sphere from '../Components/Shapes/Sphere'
 import CameraControls from '../Components/Utils/CameraControls';
 import Skybox from '../Components/Utils/Skybox';
+import OrbitalCameraRotation from '../Components/Utils/OrbitalCameraRotation';
 
 const Scene = () => <>
 
@@ -16,7 +17,8 @@ const Scene = () => <>
     <Sphere meshProps={{ position: [-1, 0, 0] }} />
     <Sphere meshProps={{ position: [-2, 0, 0] }} />
     <Sphere meshProps={{ position: [-3, 0, 0] }} />
-    <CameraControls />
+    <OrbitalCameraRotation />
+    <CameraControls/>
     <Skybox skyBoxTexture={defaultSkybox} />
 </>
 
