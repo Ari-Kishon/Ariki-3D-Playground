@@ -1,10 +1,10 @@
 
 import defaultSkybox from '../Assets/SkyBoxes/default-skybox/default-skybox';
+import { ManualCamera, OrbitalCamera } from '../Components/Cameras';
 import Box from '../Components/Shapes/Box'
 import Sphere from '../Components/Shapes/Sphere'
 import Skybox from '../Components/Utils/Skybox';
-import OrbitalCamera from '../Components/Cameras/OrbitalCameraRotator';
-import ManualCamera from '../Components/Cameras/CameraInputController';
+
 
 const Scene = () => <>
 

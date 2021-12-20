@@ -1,7 +1,7 @@
 import { useFrame, useThree } from "@react-three/fiber";
 import { FirstPersonControls } from "three-stdlib";
 
-const FirstPersonCamera = () => {
+export const FirstPersonCamera = () => {
     const {
       camera,
       gl: { domElement },
@@ -11,4 +11,3 @@ const FirstPersonCamera = () => {
     return null
   };
 FirstPersonCamera.displayName = 'Camera_FirstPerson'
-export default FirstPersonCamera;

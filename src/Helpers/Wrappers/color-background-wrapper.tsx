@@ -1,7 +1,7 @@
 import { Canvas } from '@react-three/fiber';
 import type { ISimulationWrapperProps } from '@wixc3/react-simulation';
 import Background from '../../Components/Utils/Background';
-import OrbitalCameraRotation from '../../Components/Utils/OrbitalCameraRotator';
+import {OrbitalCamera} from '../../Components/Cameras';
 
 export const colorBackgroundWrapper = (color:string):React.FC<ISimulationWrapperProps<any>> => 
 ({renderSimulation}) => 
@@ -10,6 +10,6 @@ export const colorBackgroundWrapper = (color:string):React.FC<ISimulationWrapper
     <pointLight position={[10, 10, 10]}></pointLight>
     {renderSimulation()}
     <Background color={color}/>
-    <OrbitalCameraRotation />
+    <OrbitalCamera />
 </Canvas>
 
