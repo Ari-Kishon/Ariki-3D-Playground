@@ -1,16 +1,18 @@
 import { useFrame, useThree } from "@react-three/fiber";
 import { Vector3 } from "three";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import { OrbitControls } from 'three-stdlib';
 
-interface IOrbitalRotationProps {
-  centerPosition?: {
+
+interface IOrbitalCameraRotatorProps {
+  target?: {
     x: number,
     y: number,
     z: number,
   }
+  speed?:number;
 }
 
-const OrbitalCameraRotation = ({centerPosition = new Vector3(0,0,0)}:IOrbitalRotationProps) => {
+const OrbitalCameraRotator = ({target = {x:0,y:0,z:0},speed = 2}:IOrbitalCameraRotatorProps) => {
   const {
     camera,
     gl: { domElement },
@@ -18,8 +20,10 @@ const OrbitalCameraRotation = ({centerPosition = new Vector3(0,0,0)}:IOrbitalRot
   const controls = new OrbitControls( camera, domElement);
     controls.enabled = false;
     controls.autoRotate = true
+    controls.autoRotateSpeed = speed
+    controls.target = new Vector3(target.x,target.y,target.z)
     useFrame(() => controls.update());
     return null
   };
 
-export default OrbitalCameraRotation;
+export default OrbitalCameraRotator;

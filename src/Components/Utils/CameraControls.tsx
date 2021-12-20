@@ -1,23 +1,26 @@
 import { useFrame, useThree } from "@react-three/fiber";
 import { Vector3 } from "three";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import { OrbitControls } from 'three-stdlib';
 
-interface ICameraControlProps {
-  centerPosition?: {
+interface ICameraInputControllerProps {
+  target?: {
     x: number,
     y: number,
     z: number,
   }
+  speed?:number;
 }
 
-const CameraControls = ({centerPosition = new Vector3(0,0,0)}:ICameraControlProps) => {
+const CameraInputController = ({target = {x:0,y:0,z:0}, speed = 2}:ICameraInputControllerProps) => {
     const {
       camera,
       gl: { domElement },
     } = useThree();
     const controls = new OrbitControls( camera, domElement);
+    controls.target = new Vector3(target.x,target.y,target.z)
+    controls.panSpeed = speed
     useFrame(() => controls.update());
     return null
   };
 
-export default CameraControls;
+export default CameraInputController;
