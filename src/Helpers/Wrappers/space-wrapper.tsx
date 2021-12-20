@@ -1,7 +1,7 @@
 import { Canvas } from '@react-three/fiber';
 import type { ISimulationWrapperProps } from '@wixc3/react-simulation';
 import defaultSkybox from '../../Assets/SkyBoxes/default-skybox/default-skybox';
-import OrbitalCameraRotation from '../../Components/Utils/OrbitalCameraRotator';
+import OrbitalCamera from '../../Components/Cameras/OrbitalCameraRotator';
 import Skybox from '../../Components/Utils/Skybox';
 
 export const SpaceSceneWrapper: React.FC<ISimulationWrapperProps<any>> =
@@ -10,7 +10,7 @@ export const SpaceSceneWrapper: React.FC<ISimulationWrapperProps<any>> =
     <ambientLight />
     <pointLight position={[10, 10, 10]}></pointLight>
     {renderSimulation()}
-    <OrbitalCameraRotation />
+    <OrbitalCamera />
     <Skybox skyBoxTexture={defaultSkybox} />
 </Canvas>
 
