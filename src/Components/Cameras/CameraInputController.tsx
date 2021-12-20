@@ -11,7 +11,7 @@ interface ICameraInputControllerProps {
   speed?:number;
 }
 
-const CameraInputController = ({target = {x:0,y:0,z:0}, speed = 2}:ICameraInputControllerProps) => {
+const ManualCamera = ({target = {x:0,y:0,z:0}, speed = 2}:ICameraInputControllerProps) => {
     const {
       camera,
       gl: { domElement },
@@ -22,5 +22,5 @@ const CameraInputController = ({target = {x:0,y:0,z:0}, speed = 2}:ICameraInputC
     useFrame(() => controls.update());
     return null
   };
-
-export default CameraInputController;
+ManualCamera.displayName = 'Camera_Manual'
+export default ManualCamera;

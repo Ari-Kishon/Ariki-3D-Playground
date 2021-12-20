@@ -12,7 +12,7 @@ interface IOrbitalCameraRotatorProps {
   speed?:number;
 }
 
-const OrbitalCameraRotator = ({target = {x:0,y:0,z:0},speed = 2}:IOrbitalCameraRotatorProps) => {
+const OrbitalCamera = ({target = {x:0,y:0,z:0},speed = 2}:IOrbitalCameraRotatorProps) => {
   const {
     camera,
     gl: { domElement },
@@ -25,5 +25,5 @@ const OrbitalCameraRotator = ({target = {x:0,y:0,z:0},speed = 2}:IOrbitalCameraR
     useFrame(() => controls.update());
     return null
   };
-
-export default OrbitalCameraRotator;
+ OrbitalCamera.displayName = 'Camera_Orbital'
+export default OrbitalCamera;
